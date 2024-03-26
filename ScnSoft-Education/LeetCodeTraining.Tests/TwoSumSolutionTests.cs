@@ -1,6 +1,4 @@
-﻿using Xunit;
-
-using LeetCodeTraining.TwoSum1;
+﻿using LeetCodeTraining.TwoSum1;
 
 namespace LeetCodeTraining.Tests
 {
@@ -10,16 +8,30 @@ namespace LeetCodeTraining.Tests
         public void TwoSum_ArrayWith2Nums()
         {
             // Arrange
-            var solution = new TwoSum1.Solution();
-            int[] nums = new int[] { 2, 7, 11, 15 };
-            int target = 9;
+            var solution = new TwoSumSolution();
+            var nums = new int[] { 2, 7, 11, 15 };
+            var target = 9;
 
             // Act
-            int[] result = solution.TwoSum(nums, target);
+            var result = solution.Resolve(nums, target);
 
             // Assert
-            Assert.Equal(new int[] { 0, 1 }, result);
+            Assert.Equal([0, 1], result);
+        }
 
+        [Fact]
+        public void NotfoundItems()
+        {
+            // Arrange
+            var solution = new TwoSumSolution();
+            var nums = new int[] { 2, 7, 11, 15 };
+            var target = 10;
+
+            // Act
+            var result = solution.Resolve(nums, target);
+
+            // Assert
+            Assert.Null(result);
         }
     }
 }
