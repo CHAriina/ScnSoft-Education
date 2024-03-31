@@ -2,42 +2,42 @@
 {
     public class Solution
     {
-        public string LongestPalindrome(string s)
+        public static string LongestPalindrome(string inputString)
         {
-            if (string.IsNullOrEmpty(s))
+            if (string.IsNullOrEmpty(inputString))
             {
-                return "";
+                return string.Empty;
             }
 
-            string result = "";
+            string longestPalindromeSubstr = string.Empty;
 
-            for (int i = 0; i < s.Length; i++)
+            for (int firstIndex = 0; firstIndex < inputString.Length; firstIndex++)
             {
-                for (int j = i + 1; j <= s.Length; j++)
+                for (int secondIndex = firstIndex + 1; secondIndex <= inputString.Length; secondIndex++)
                 {
-                    string substr = s.Substring(i, j - i);
-                    if (IsPalindrome(substr) && substr.Length > result.Length)
+                    string currentSubstring = inputString.Substring(firstIndex, secondIndex - firstIndex);
+                    if (IsPalindrome(currentSubstring) && currentSubstring.Length > longestPalindromeSubstr.Length)
                     {
-                        result = substr;
+                        longestPalindromeSubstr = currentSubstring;
                     }
                 }
             }
 
-            return result;
+            return longestPalindromeSubstr;
         }
 
-        public bool IsPalindrome(string s)
+        public static bool IsPalindrome(string inputString)
         {
-            int i = 0, j = s.Length - 1;
-            while (i < j)
+            int firstIndex = 0, secondIndex = inputString.Length - 1;
+            while (firstIndex < secondIndex)
             {
-                if (s[i] != s[j])
+                if (inputString[firstIndex] != inputString[secondIndex])
                 {
                     return false;
                 }
 
-                i++;
-                j--;
+                firstIndex++;
+                secondIndex--;
             }
 
             return true;
