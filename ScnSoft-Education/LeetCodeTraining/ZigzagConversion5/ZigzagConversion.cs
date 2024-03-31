@@ -1,22 +1,23 @@
-﻿
+﻿using System.Text;
+
 namespace LeetCodeTraining.ZigzagConversion5
 {
     public class Solution
     {
-        public static string Convert(string s, int numRows)
+        public static string Convert(string inputString, int numRows)
         {
-            if (numRows == 1 || s.Length <= numRows)
+            if (string.IsNullOrEmpty(inputString) || numRows == 1 || inputString.Length <= numRows)
             {
-                return s;
+                return inputString;
             }
 
-            string[] rows = new string[numRows];
+            string[] zigzagRows = new string[numRows];
             int currentRow = 0;
             int direction = 1;
 
-            foreach (char c in s)
+            foreach (char character in inputString)
             {
-                rows[currentRow] += c;
+                zigzagRows[currentRow] += character;
                 currentRow += direction;
 
                 if (currentRow == 0 || currentRow == numRows - 1)
@@ -25,13 +26,13 @@ namespace LeetCodeTraining.ZigzagConversion5
                 }
             }
 
-            string result = "";
-            foreach (string row in rows)
+            StringBuilder resultBuilder = new StringBuilder();
+            foreach (string row in zigzagRows)
             {
-                result += row;
+                resultBuilder.Append(row);
             }
 
-            return result;
+            return resultBuilder.ToString();
         }
     }
-} 
+}
