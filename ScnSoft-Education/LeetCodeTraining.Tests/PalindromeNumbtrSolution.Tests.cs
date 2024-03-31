@@ -11,11 +11,10 @@ namespace PalindromeNumberTests
         [InlineData(12321, true)]
         public void IsPalindrome_ValidInput_ReturnsExpectedResult(int input, bool expectedResult)
         {
-            // Arrange
-            bool result;
 
+            // Arrange
             // Act
-            result = PalindromeNumberSolution.IsPalindrome(input);
+            bool result = PalindromeNumberSolution.IsPalindrome(input);
 
             // Assert
             Assert.Equal(expectedResult, result);
