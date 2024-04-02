@@ -8,7 +8,7 @@ namespace LeetCodeTraining.Tests
         [InlineData(123, 321)]
         [InlineData(-123, -321)]
         [InlineData(120, 21)]
-        [InlineData(1534236469, 0)] // Пример переполнения
+        [InlineData(1534236469, 0)] // Example of overflow
         public void TestReverse(int inputNumber, int expected)
         {
             Solution solution = new Solution();
