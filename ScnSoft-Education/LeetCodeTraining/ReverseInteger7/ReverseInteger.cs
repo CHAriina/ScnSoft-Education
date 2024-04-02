@@ -10,8 +10,6 @@ public class Solution
             inputNumber /= 10;
             int digit = inputNumber % 10;
             reversed = reversed * 10 + digit;
-
-
             if (reversed > Int32.MaxValue / 10 || reversed < Int32.MinValue / 10)
             {
                 return 0;
