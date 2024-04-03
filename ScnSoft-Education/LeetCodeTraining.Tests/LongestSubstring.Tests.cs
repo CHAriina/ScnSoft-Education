@@ -1,6 +1,5 @@
 ﻿using LeetCodeTraining.LongestSubstringWithoutRepeating3;
-
-namespace LeetCodeTraining.Tests
+namespace LongestSubstringWithoutRepeatingTests
 {
     public class LongestSubstring
     {

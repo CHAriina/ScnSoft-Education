@@ -1,6 +1,5 @@
 ﻿using LeetCodeTraining.TwoSum1;
-
-namespace LeetCodeTraining.Tests
+namespace TwoSumTests
 {
     public class TwoSumSolutionTests
     {
