@@ -28,7 +28,9 @@ namespace LeetCodeTraining.Tests.AddTwoNumbersTest
         private ListNode CreateLinkedList(int[] values)
         {
             if (values == null || values.Length == 0)
+            {
                 return null;
+            }
 
             ListNode head = new ListNode(values[0]);
             ListNode current = head;

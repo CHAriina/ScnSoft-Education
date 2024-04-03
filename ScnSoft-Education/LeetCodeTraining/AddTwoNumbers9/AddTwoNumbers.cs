@@ -29,8 +29,14 @@
                 resultNode.next = new ListNode(sum % 10);
                 resultNode = resultNode.next;
 
-                if (currentNodeL1 != null) currentNodeL1 = currentNodeL1.next;
-                if (currentNodeL2 != null) currentNodeL2 = currentNodeL2.next;
+                if (currentNodeL1 != null)
+                {
+                    currentNodeL1 = currentNodeL1.next;
+                }
+                if (currentNodeL2 != null)
+                {
+                    currentNodeL2 = currentNodeL2.next;
+                }
             }
 
             if (carry > 0)
