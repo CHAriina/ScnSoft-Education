@@ -1,5 +1,5 @@
 ﻿using LeetCodeTraining.PalindromeNumber2;
-namespace PalindromeNumberTests
+namespace LeetCodeTraining.Tests.PalindromeNumber
 {
     public class PalindromeNumberSolutionTests
     {

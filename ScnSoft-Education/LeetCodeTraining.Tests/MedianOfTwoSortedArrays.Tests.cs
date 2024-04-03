@@ -1,5 +1,5 @@
 ﻿using LeetCodeTraining.MedianOfTwoSortedArrays6;
-namespace MedianOfTwoSortedArraysTests
+namespace LeetCodeTraining.Tests.MedianOfTwoSortedArrays
 
 {
     public class SolutionTests

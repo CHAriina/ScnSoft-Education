@@ -4,40 +4,40 @@
     {
         public double FindMedianSortedArrays(int[] nums1, int[] nums2)
         {
-            int m = nums1.Length;
-            int n = nums2.Length;
-            int[] merged = new int[m + n];
+            int length1 = nums1.Length;
+            int length2 = nums2.Length;
+            int[] merged = new int[length1 + length2];
 
-            int i = 0, j = 0, k = 0;
-            while (i < m && j < n)
+            int index1 = 0, index2 = 0, indexMerged = 0;
+            while (index1 < length1 && index2 < length2)
             {
-                if (nums1[i] < nums2[j])
+                if (nums1[index1] < nums2[index2])
                 {
-                    merged[k++] = nums1[i++];
+                    merged[indexMerged++] = nums1[index1++];
                 }
                 else
                 {
-                    merged[k++] = nums2[j++];
+                    merged[indexMerged++] = nums2[index2++];
                 }
             }
 
-            while (i < m)
+            while (index1 < length1)
             {
-                merged[k++] = nums1[i++];
+                merged[indexMerged++] = nums1[index1++];
             }
 
-            while (j < n)
+            while (index2 < length2)
             {
-                merged[k++] = nums2[j++];
+                merged[indexMerged++] = nums2[index2++];
             }
 
-            if ((m + n) % 2 == 0)
+            if ((length1 + length2) % 2 == 0)
             {
-                return (double)(merged[(m + n) / 2] + merged[(m + n) / 2 - 1]) / 2;
+                return (double)(merged[(length1 + length2) / 2] + merged[(length1 + length2) / 2 - 1]) / 2;
             }
             else
             {
-                return (double)merged[(m + n) / 2];
+                return (double)merged[(length1 + length2) / 2];
             }
         }
     }

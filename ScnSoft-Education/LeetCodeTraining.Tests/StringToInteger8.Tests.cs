@@ -1,5 +1,5 @@
 ﻿using LeetCodeTraining.StringToInteger8;
-namespace StringToIntegerTests
+namespace LeetCodeTraining.Tests.StringToInteger
 {
     public class MyAtoiTests
     {
