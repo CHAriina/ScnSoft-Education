@@ -1,5 +1,5 @@
 ﻿using LeetCodeTraining.AddTwoNumbers9;
-namespace AddTwoNumbersTests
+namespace LeetCodeTraining.Tests.AddTwoNumbersTest
 {
     public class AddTwoNumbersTests
     {
