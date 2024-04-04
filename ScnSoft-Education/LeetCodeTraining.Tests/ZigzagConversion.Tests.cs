@@ -1,5 +1,5 @@
 ﻿using LeetCodeTraining.ZigzagConversion5;
-namespace ZigzagConversionTests
+namespace LeetCodeTraining.Tests.ZigzagConversion
 {
     public class SolutionTests
     {

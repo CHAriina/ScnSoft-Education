@@ -1,5 +1,5 @@
 ﻿using LeetCodeTraining.LongestPalindromicSubstring4;
-namespace LongestPalindromicSubstringTests
+namespace LeetCodeTraining.Tests.LongestPalindromicSubstring
 {
     public class SolutionTests
     {
