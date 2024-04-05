@@ -1,4 +1,5 @@
 ﻿using LeetCodeTraining.ContainerWithMostWater10;
+
 namespace LeetCodeTraining.Tests.ContainerWithMostWater
 {
     public class SolutionTests
