@@ -6,7 +6,7 @@
         {
             if (inputStrings == null || inputStrings.Length == 0)
             {
-                return "";
+                return string.Empty;
             }
 
             string currentPrefix = inputStrings[0];
@@ -17,7 +17,7 @@
                     currentPrefix = currentPrefix.Substring(0, currentPrefix.Length - 1);
                     if (currentPrefix.Length == 0)
                     {
-                        return "";
+                        return string.Empty;
                     }
                 }
             }

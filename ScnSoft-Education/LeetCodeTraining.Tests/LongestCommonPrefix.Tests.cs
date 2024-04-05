@@ -9,7 +9,6 @@ namespace LeetCodeTraining.Tests.LongestCommonPrefix
             [InlineData(new string[] { "dog", "racecar", "car" }, "")]
             public void TestLongestCommonPrefix(string[] input, string expected)
             {
-               
                 var solution = new Solution();
                 var result = solution.LongestCommonPrefix(input);
                 Assert.Equal(expected, result);
