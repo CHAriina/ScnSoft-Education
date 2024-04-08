@@ -1,6 +1,6 @@
 ﻿using LeetCodeTraining.ReverseInteger7;
 
-namespace LeetCodeTraining.Tests
+namespace LeetCodeTraining.Tests.ReverseInteger
 {
     public class SolutionTests
     {

@@ -1,6 +1,6 @@
 ﻿using LeetCodeTraining.ThreeSum14;
 
-namespace LeetCodeTraining.ThreeSum14
+namespace LeetCodeTraining.Tests.ThreeSum14
 {
     public class SolutionTests
     {
