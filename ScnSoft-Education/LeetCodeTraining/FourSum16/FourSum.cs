@@ -14,12 +14,14 @@
                 {
                     continue;
                 }
+
                 for (int secondNumIndex = firstNumIndex + 1; secondNumIndex < nums.Length - 2; secondNumIndex++)
                 {
                     if (secondNumIndex > firstNumIndex + 1 && nums[secondNumIndex] == nums[secondNumIndex - 1])
                     {
                         continue;
                     }
+
                     int leftPointer = secondNumIndex + 1;
                     int rightPointer = nums.Length - 1;
 
@@ -35,10 +37,12 @@
                             {
                                 leftPointer++;
                             }
+
                             while (leftPointer < rightPointer && nums[rightPointer] == nums[rightPointer - 1])
                             {
                                 rightPointer--;
                             }
+
                             leftPointer++;
                             rightPointer--;
                         }
