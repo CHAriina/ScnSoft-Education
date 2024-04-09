@@ -22,11 +22,17 @@
 
             for (int count = 0; count <= n; count++)
             {
-                if (first == null) return head; 
+                if (first == null)
+                {
+                    return head;
+                }
                 first = first.next;
             }
 
-            if (first == null) return head; 
+            if (first == null)
+            {
+                return head;
+            }
 
             while (first != null)
             {
