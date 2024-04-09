@@ -5,6 +5,7 @@ namespace LeetCodeTraining.Tests.RemoveNthNodeFromEndOfList
     public class RemoveNthNodeFromEndOfListTests
     {
         [Theory]
+        [InlineData(new int[] { 1, 2, 3, 4, 5 }, 6, new int[] { 1, 2, 3, 4, 5 })]
         [InlineData(new int[] { 1, 2, 3, 4, 5 }, 2, new int[] { 1, 2, 3, 5 })]
         [InlineData(new int[] { 1, 2, 3, 4, 5 }, 1, new int[] { 1, 2, 3, 4 })]
         public void Test_RemoveNthFromEnd(int[] inputValues, int n, int[] expectedValues)

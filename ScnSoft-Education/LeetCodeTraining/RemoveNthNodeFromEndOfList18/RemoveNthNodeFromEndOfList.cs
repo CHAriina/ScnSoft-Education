@@ -10,6 +10,7 @@
             this.next = next;
         }
     }
+
     public class Solution
     {
         public ListNode RemoveNthFromEnd(ListNode head, int n)
@@ -21,8 +22,11 @@
 
             for (int count = 0; count <= n; count++)
             {
+                if (first == null) return head; 
                 first = first.next;
             }
+
+            if (first == null) return head; 
 
             while (first != null)
             {
