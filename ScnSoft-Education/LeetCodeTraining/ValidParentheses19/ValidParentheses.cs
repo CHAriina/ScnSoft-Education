@@ -5,27 +5,26 @@
         public bool IsValid(string inputString)
         {
             Stack<char> openBrackets = new Stack<char>();
+            Dictionary<char, char> bracketPairs = new Dictionary<char, char>
+            {
+                { '(', ')' },
+                { '{', '}' },
+                { '[', ']' }
+            };
 
             foreach (char bracket in inputString)
             {
-                if (bracket == '(' || bracket == '{' || bracket == '[')
+                if (bracketPairs.ContainsKey(bracket))
                 {
                     openBrackets.Push(bracket);
                 }
                 else
                 {
-                    if (openBrackets.Count == 0)
+                    if (openBrackets.Count == 0 || bracketPairs[openBrackets.Peek()] != bracket)
                     {
                         return false;
                     }
-                    if (bracket == ')' && openBrackets.Peek() == '(' || bracket == '}' && openBrackets.Peek() == '{' || bracket == ']' && openBrackets.Peek() == '[')
-                    {
-                        openBrackets.Pop();
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    openBrackets.Pop();
                 }
             }
 
