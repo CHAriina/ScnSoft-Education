@@ -20,10 +20,13 @@
                 }
                 else
                 {
-                    if (openBrackets.Count == 0 || bracketPairs[openBrackets.Peek()] != bracket)
+                    var prevOpenBracket = openBrackets.Peek();
+                    var prevCloseBracket = bracketPairs[prevOpenBracket];
+                    if (openBrackets.Count == 0 || prevCloseBracket != bracket)
                     {
                         return false;
                     }
+
                     openBrackets.Pop();
                 }
             }
