@@ -18,14 +18,20 @@
 
             var res = new List<string>();
             if (string.IsNullOrEmpty(digits))
+            {
                 return res;
+            }
 
             res.Add(string.Empty);
             for (var i = 0; i < digits.Length; i++)
-                res = res
-                    .SelectMany(x => digitsLettersMap[digits[i]].Select(y => x + y.ToString()))
-                    .ToList();
-
+            {
+                if (digitsLettersMap.ContainsKey(digits[i]))
+                {
+                    res = res
+                        .SelectMany(x => digitsLettersMap[digits[i]].Select(y => x + y))
+                        .ToList();
+                }
+            }
             return res;
 
         }

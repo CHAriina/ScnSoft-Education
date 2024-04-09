@@ -13,6 +13,7 @@ namespace LeetCodeTraining.Tests.LetterCombinationsOfAPhoneNumber
 
         [Theory]
         [InlineData("23", new string[] { "ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf" })]
+        [InlineData("231", new string[] { "ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf" })]
         [InlineData("79", new string[] { "pw", "px", "py", "pz", "qw", "qx", "qy", "qz", "rw", "rx", "ry", "rz", "sw", "sx", "sy", "sz" })]
         public void LetterCombinations_ShouldReturnCorrectResult(string digits, string[] expected)
         {
