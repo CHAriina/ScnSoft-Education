@@ -16,24 +16,41 @@
                 { '9', "wxyz" }
             };
 
-            var res = new List<string>();
             if (string.IsNullOrEmpty(digits))
             {
+                return Array.Empty<string>();
+            }
+
+            const int maxLetersLength = 4;
+            var res = new List<string>(digits.Length * maxLetersLength);
+
+            if (digits.Length == 1)
+            {
+                if (digitsLettersMap.TryGetValue(digits[0], out var leters))
+                {
+                    return leters.Select(ch => ch.ToString()).ToList();
+                }
+
                 return res;
             }
 
-            res.Add(string.Empty);
-            for (var i = 0; i < digits.Length; i++)
+            for (var i = 0; i < digits.Length - 1; i++)
             {
-                if (digitsLettersMap.ContainsKey(digits[i]))
+                var nextIndex = i + 1;
+                if (digitsLettersMap.TryGetValue(digits[i], out var leters) && digitsLettersMap.TryGetValue(digits[nextIndex], out var nextLeters))
                 {
-                    res = res
-                        .SelectMany(x => digitsLettersMap[digits[i]].Select(y => x + y))
-                        .ToList();
+                    foreach (var ch in leters)
+                    {
+                        foreach (var ch2 in nextLeters)
+                        {
+                            string value = new string(new[] { ch, ch2 });
+                            res.Add(value);
+                        }
+                    }
                 }
             }
-            return res;
 
+            return res;
         }
     }
 }
